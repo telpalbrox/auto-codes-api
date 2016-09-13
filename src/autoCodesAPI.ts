@@ -74,7 +74,7 @@ export const autoCodesAPI = {
             possibleSymptoms: sections['Possible symptoms'],
             description: sections[`${options.code.toLocaleUpperCase()} ${options.carBrand ? capitalize(options.carBrand) + ' ' : ''}Description`]
         };
-        if (options.language !== 'en') {
+        if (options.language !== 'en' && config.BING_CLIENT_SECRET && config.BING_CLIENT_ID) {
             return {
                 possiblesCauses: await bingTranslatorAPI.translate(codeInfo.possiblesCauses, options.language),
                 whenCodeDetected: await bingTranslatorAPI.translate(codeInfo.whenCodeDetected, options.language),

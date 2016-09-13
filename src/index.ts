@@ -6,14 +6,6 @@ import bodyParser = require('body-parser');
 import { autoCodesAPI } from './autoCodesAPI';
 const config = { port: process.env.PORT || 3000 };
 
-if (!process.env.BING_CLIENT_ID) {
-    throw new Error('You should set BING_CLIENT_ID environment variable');
-}
-
-if (!process.env.BING_CLIENT_SECRET) {
-    throw new Error('You should set BING_CLIENT_SECRET environment variable');
-}
-
 const app: express.Application = express();
 
 app.use(bodyParser.json({limit: "7mb"}));
