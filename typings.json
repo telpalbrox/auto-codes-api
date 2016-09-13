@@ -1,0 +1,12 @@
+{
+  "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20160629101425",
+    "node": "registry:env/node#6.0.0+20160813135048"
+  },
+  "dependencies": {
+    "body-parser": "registry:npm/body-parser#1.15.2+20160815132839",
+    "cheerio": "registry:npm/cheerio#0.20.0+20160422172414",
+    "cors": "registry:npm/cors#2.7.0+20160902012746",
+    "express": "registry:npm/express#4.14.0+20160815112707"
+  }
+}
