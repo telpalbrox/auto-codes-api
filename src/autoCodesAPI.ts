@@ -44,7 +44,8 @@ export const autoCodesAPI = {
         const $resultsList = $resultsListPage('#scroller ul li a');
         let codeDetailUrl: string = null;
         $resultsList.each((index, element) => {
-            const codeArray = element.lastChild.nodeValue.trim().split(' ');
+            const $element = $resultsListPage(element);
+            const codeArray = $element.text().trim().split(' ');
             if (!options.carBrand && codeArray[0] === options.code.toUpperCase() && !codeArray[1]) {
                 const attribs: { href?: string } = element.attribs;
                 codeDetailUrl = attribs.href;
